@@ -1,0 +1,57 @@
+// Scaffolding
+@body-bg:    #fff;
+@text-color: #1e1e1e;
+
+// Fonts
+@font-face {
+  font-family: 'Vanadine';
+  src: url('../../src/fonts/Vanadine_Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+// Navbar
+@navbar: rgba(0, 0, 0, .7);
+@navbar-link: #fff;
+@navbar-active: #000;
+
+// Transitions
+.transition (@transition) {
+	-webkit-transition: @transition;  
+	-moz-transition:    @transition;
+	-ms-transition:     @transition; 
+	-o-transition:      @transition;  
+}
+
+.navbar {
+	min-height: 30px;
+	background: @navbar;
+
+	.navbar-nav {
+		>li {
+			>a {
+				padding-top: 5px;
+				padding-bottom: 5px;
+				color: @navbar-link;
+				font-family: 'Vanadine', Helvetica, Arial, sans-serif;
+
+				&:hover {
+					color: darken(@navbar-link, 10%);
+				}
+			}
+
+			&.active {
+				>a {
+					color: @navbar-link;
+					background: @navbar-active;
+
+					&:hover {
+						.transition(color 0.3s ease);
+						color: red;
+						background: @navbar-active;
+					}
+				}
+			}
+		}
+	}
+}
+
+ 

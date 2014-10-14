@@ -1,23 +1,24 @@
 module.exports = function(grunt) {
-
-  // Project configuration.
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
-      build: {
-        src: 'test_run/scss/app.scss',
-        dest: 'test_run/css/app.css'
-      }
-    }
-  });
-
-  // Load the plugin that provides the "uglify" task.
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-
-  // Default task(s).
-  grunt.registerTask('default', ['uglify']);
-
+    grunt.initConfig({
+        less: {
+            development: {
+                options: {
+                    paths: ["./src/less"],
+                    yuicompress: true
+                },
+                files: {
+                    "./dist/css/architecture.css": "./src/less/architecture.less"
+                }
+            }
+        },
+        watch: {
+            files: "./src/less/*",
+            tasks: ["less"]
+        }
+    });
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+   grunt.loadNpmTasks('grunt-contrib-uglify');
+   grunt.loadNpmTasks('grunt-contrib-less');
+   grunt.loadNpmTasks('grunt-contrib-cssmin');
+   grunt.loadNpmTasks('grunt-contrib-watch');
 };

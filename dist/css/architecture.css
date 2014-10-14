@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Vanadine';
+  src: url('../../src/fonts/Vanadine_Regular.ttf') format('truetype');
+  
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+.navbar {
+  min-height: 30px;
+  background: rgba(0, 0, 0, 0.7);
+}
+.navbar .navbar-nav > li > a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #ffffff;
+  font-family: 'Vanadine', Helvetica, Arial, sans-serif;
+}
+.navbar .navbar-nav > li > a:hover {
+  color: #e6e6e6;
+}
+.navbar .navbar-nav > li.active > a {
+  color: #ffffff;
+  background: #000000;
+}
+.navbar .navbar-nav > li.active > a:hover {
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  color: red;
+  background: #000000;
+}
