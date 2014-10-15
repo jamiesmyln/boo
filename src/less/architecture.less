@@ -3,15 +3,18 @@
 @text-color: #1e1e1e;
 
 // Fonts
+@font-primary: 'PT Sans Narrow', sans-serif;
+
 @font-face {
-  font-family: 'Vanadine';
-  src: url('../../src/fonts/Vanadine_Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+	font-family: 'StrongGlasgow';
+	src: url('../../src/fonts/StrongGlasgow.ttf') format('truetype');
 }
 
 // Navbar
 @navbar: rgba(0, 0, 0, .7);
 @navbar-link: #fff;
 @navbar-active: #000;
+@link-hover: #86b2d9;
 
 // Transitions
 .transition (@transition) {
@@ -23,6 +26,8 @@
 
 .backstretch {
 	overflow: hidden;
+	position: fixed;
+	z-index: -9999;
 	margin: 0;
 	padding: 0;
 	top:0;
@@ -40,10 +45,11 @@
 				padding-top: 5px;
 				padding-bottom: 5px;
 				color: @navbar-link;
-				font-family: 'Vanadine', Helvetica, Arial, sans-serif;
+				font-family: @font-primary;
 
 				&:hover {
-					color: darken(@navbar-link, 10%);
+					.transition(color 0.3s ease);
+					color: @link-hover;
 				}
 			}
 
@@ -54,7 +60,7 @@
 
 					&:hover {
 						.transition(color 0.3s ease);
-						color: red;
+						color: @link-hover;
 						background: @navbar-active;
 					}
 				}
@@ -62,5 +68,21 @@
 		}
 	}
 }
+main {
+	margin-top: 50px;
+	.logo {
+		.header-img {
+			img {
+				height: 150px;
+				margin: 0 auto;
+			}
+		}
+		h1 {
+			font-family: 'StrongGlasgow', sans-serif;
+			text-align: center;
+		}
+	}
+}
+
 
  

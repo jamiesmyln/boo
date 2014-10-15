@@ -1,11 +1,11 @@
 @font-face {
-  font-family: 'Vanadine';
-  src: url('../../src/fonts/Vanadine_Regular.ttf') format('truetype');
-  
-  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  font-family: 'StrongGlasgow';
+  src: url('../../src/fonts/StrongGlasgow.ttf') format('truetype');
 }
 .backstretch {
   overflow: hidden;
+  position: fixed;
+  z-index: -9999;
   margin: 0;
   padding: 0;
   top: 0;
@@ -21,10 +21,14 @@
   padding-top: 5px;
   padding-bottom: 5px;
   color: #ffffff;
-  font-family: 'Vanadine', Helvetica, Arial, sans-serif;
+  font-family: 'PT Sans Narrow', sans-serif;
 }
 .navbar .navbar-nav > li > a:hover {
-  color: #e6e6e6;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  color: #86b2d9;
 }
 .navbar .navbar-nav > li.active > a {
   color: #ffffff;
@@ -35,6 +39,17 @@
   -moz-transition: color 0.3s ease;
   -ms-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
-  color: red;
+  color: #86b2d9;
   background: #000000;
+}
+main {
+  margin-top: 50px;
+}
+main .logo .header-img img {
+  height: 150px;
+  margin: 0 auto;
+}
+main .logo h1 {
+  font-family: 'StrongGlasgow', sans-serif;
+  text-align: center;
 }

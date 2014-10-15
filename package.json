@@ -9,5 +9,8 @@
     "grunt-contrib-less": "latest",
     "grunt-contrib-cssmin": "latest",
     "grunt-contrib-watch": "latest"
+  },
+  "dependencies": {
+    "swig": "^1.4.2"
   }
 }
