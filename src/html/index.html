@@ -4,38 +4,55 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Silver Jackalope</title>
+		<title>Ivory Penguin</title>
 		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="../../dist/css/architecture.css" rel="stylesheet">
-		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css">
 		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
-		<script src="../../src/js/scripts.js"></script>
 		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+		<script src="../../src/js/crossfade.js"></script>
+		<script src="../../src/js/prism.js"></script>
+		<script src="../../src/js/scripts.js"></script>
 	</head>
 	<body>
 		<section class="container-fluid">
-			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<nav class="navbar navbar-fixed-top" role="navigation">
 			  <div class="container">
+			  	<a class="navbar-brand" href="#">
+			  		<img src="../../src/img/header-logo.png" alt="penguin logo">
+			  		Ivory Penguin
+			  	</a>
 			    <ul class="nav navbar-nav">
-			    	<li class="active"><a href="#">Link</a></li>
-	        		<li><a href="#">Link</a></li>
+			    	<li><a>Home</a></li>
+			    	<li><a>About</a></li>
+			    	<li><a>Values</a></li>
+			    	<li><a>Team</a></li>
+			    	<li><a>Contact</a></li>
 			    </ul>
 			  </div>
+			  <div class="nav-border"></div>
 			</nav>
 		</section><!-- ./nav -->
 
-		<main class="row">
-			<div class="logo">
-				<div class="header-img">
-					<img src="../../src/img/dummy-logo.png" class="img-responsive" alt="silver jackalope">
+		<section class="banner-container">
+			<div class="header-banner" data-crossfade-start="../../src/img/6.jpg" data-crossfade-end="../../src/img/6-blur.jpg">
+				<div class="logo">
+					<img src="../../src/img/penguin.png" alt="penguin logo">
+					<h1>Ivory Penguin</h1>
 				</div>
-				<h1 class="col-xs-12">The Silver Jackalope</h1>
 			</div>
-		</main><!-- ./content(main) -->
-		<div class="backstretch">
-			<img src="../../src/img/clouds2.png" alt="clouds">
-		</div><!-- ./backstretch -->
+		</section><!-- ./header banner -->
+
+		<section class="gray-wrap row">
+		<div class="col-sm-4">
+			
+		</div>
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4"></div>
+		</section>
 	</body>
 </html>

@@ -1,1 +1,7 @@
-$.backstretch("../../src/img/clouds2.png");
+$(function () {
+		
+	$('.header-banner').crossfade({
+		threshold: 0.2
+	});
+
+});
